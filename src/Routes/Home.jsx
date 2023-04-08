@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext  } from "react";
 import Card from '../Components/Card'
+import { ContextGlobal } from "../Components/utils/global.context";
+
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Home = () => {
   const [dentists, setDentists] = useState([]);
-
+  const { theme } = useContext(ContextGlobal);
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/users")
     .then((response) => response.json())
@@ -13,7 +15,7 @@ const Home = () => {
     .catch((error) => console.log(error));
   }, []);
   return (
-    <main className="" >
+    <main className={theme === "dark" ? "dark" : ""}>
       <h1>Home</h1>
       <div className='card-grid'>
         {/* Aqui deberias renderizar las cards */}
