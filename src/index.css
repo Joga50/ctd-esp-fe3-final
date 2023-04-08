@@ -176,6 +176,9 @@ label {
 .theme-toggle {
   height: 30px;
   margin-left: 10px;
+  background-color: #1b1b1b;
+  border: none;
+  border-radius: 0.5em;
 }
 .alert-success {
   color: #155724;
@@ -225,9 +228,7 @@ td, th {
   padding: 8px;
 }
 
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
+
 
 .dark{
   background-color: #121010ce;
@@ -245,4 +246,6 @@ tr:nth-child(even) {
 .social-media-icons img {
   height: 27px;
   margin: 5px;
+  
+ 
 }

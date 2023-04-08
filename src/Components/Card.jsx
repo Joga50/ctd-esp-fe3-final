@@ -24,7 +24,7 @@ const Card = ({ name, username, id }) => {
 
 
         
-        <button style={{backgroundColor: "rgb(133, 182, 225)"}} onClick={addFav} className="favButton">Add fav <FontAwesomeIcon icon={faStar} /></button>
+        <button style={{backgroundColor: "rgb(133, 182, 225)"}} onClick={addFav} className="favButton"> <FontAwesomeIcon icon={faStar} style={{color: "yellow", height: "15px"}} /></button>
     </div>
   );
 };

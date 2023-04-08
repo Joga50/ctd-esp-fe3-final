@@ -14,11 +14,13 @@ const Navbar = () => {
   return (
     <nav >
       <div className="dhLogo">
+        <Link to="/">
         <img
-          src="images/DH.png"
+          src="./images/DH.png"
           alt="img"
           style={{ height: "50px", margin: "15px" }}
         />
+        </Link>
       </div>
       <div className="navRoutes">
         <Link to="/">Home</Link>
@@ -27,9 +29,9 @@ const Navbar = () => {
         {/* Use Font Awesome icons for the theme toggle button */}
         <button className="theme-toggle" onClick={toggleTheme}>
           {theme === "light" ? (
-            <FontAwesomeIcon icon={faMoon} />
+            <FontAwesomeIcon icon={faMoon}style={{color: "white"}} />
           ) : (
-            <FontAwesomeIcon icon={faSun} />
+            <FontAwesomeIcon icon={faSun} style={{color: "white"}} />
           )}
         </button>
       </div>
