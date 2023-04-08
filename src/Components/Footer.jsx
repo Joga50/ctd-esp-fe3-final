@@ -15,7 +15,7 @@ const Footer = () => {
 
 
 
-      
+      <h6>Jose Gabriel Molina C1</h6>
     </footer>
   )
 }
