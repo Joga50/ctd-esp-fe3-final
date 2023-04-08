@@ -15,7 +15,8 @@ const Home = () => {
     .catch((error) => console.log(error));
   }, []);
   return (
-    <main className={theme === "dark" ? "dark" : ""}>
+    <main className={theme === "dark" ? "dark" : ""}
+    style={{ minHeight: "100vh", display: "flex", flexDirection: "column", paddingBottom: "30px" }}>
       <h1>Home</h1>
       <div className='card-grid'>
         {/* Aqui deberias renderizar las cards */}

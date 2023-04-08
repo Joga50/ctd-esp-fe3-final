@@ -5,13 +5,18 @@ import Contact from "./Routes/Contact";
 import Detail from "./Routes/Detail"
 import Favs from "./Routes/Favs"
 import Home from "./Routes/Home";
-import { ContextProvider } from './Components/utils/global.context';
-
+import { ContextProvider,ContextGlobal  } from './Components/utils/global.context';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import { useContext, useEffect } from "react";
 
 function App() {
+  const { theme } = useContext(ContextGlobal);
+
+ 
   return (
-    <div className='App'>
-      <ContextProvider>
+    <ContextProvider>
+    <div className={theme === "dark" ? "dark" : ""}>
+      
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />
@@ -20,8 +25,9 @@ function App() {
           <Route path='/favs' element={<Favs />} />
         </Routes>
         <Footer />
-      </ContextProvider>
+     
     </div>
+    </ContextProvider>
   );
 }
 

@@ -15,15 +15,32 @@ const Detail = () => {
   .catch((error) => console.log(error));
 }, [id]);
   return (
-    <div className={theme === "dark" ? "dark" : ""}>
+    <div className={theme === "dark" ? "dark" : ""} style={{height: "100vh", display: "flex", flexDirection: "column"}}>
     
       {/* aqui deberan renderizar la informacion en detalle de un user en especifico */}
       <h1>Detail Dentist {id}</h1>
       {/* Deberan mostrar el name - email - phone - website por cada user en especifico */}
-      <p>Name: {dentist.name}</p>
-      <p>Email: {dentist.email}</p>
-      <p>Phone: {dentist.phone}</p>
-      <p>Website: {dentist.website}</p>
+      <table>
+        <tbody>
+          <tr>
+            <td>Name:</td>
+            <td>{dentist.name}</td>
+          </tr>
+          <tr>
+            <td>Email:</td>
+            <td>{dentist.email}</td>
+          </tr>
+          <tr>
+            <td>Phone:</td>
+            <td>{dentist.phone}</td>
+          </tr>
+          <tr>
+            <td>Website:</td>
+            <td>{dentist.website}</td>
+          </tr>
+        </tbody>
+      </table>
+
 
     </div>
   )
